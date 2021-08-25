@@ -6,7 +6,9 @@ import NxAbstractCheckbox from '@jswork/next-abstract-checkbox';
 import ReactAntCheckboxGroup from '@jswork/react-ant-checkbox-group';
 import { Button } from 'antd';
 
-interface RasfCheckboxProps {
+const CLASS_NAME = 'rasf-checkbox';
+
+export interface RasfCheckboxProps {
   /**
    * The extended className for component.
    */
@@ -37,19 +39,17 @@ interface RasfCheckboxProps {
   toggleable?: boolean;
 }
 
-const CLASS_NAME = 'rasf-checkbox';
-
 export default class RasfCheckbox extends Component<RasfCheckboxProps> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static defaultProps = {
     value: [],
-    idKey: 'id',
+    idKey: 'value',
     toggleable: false,
     onChange: noop
   };
 
-  ctrl: any;
+  private ctrl: any;
 
   state = {
     value: this.props.value
@@ -100,12 +100,7 @@ export default class RasfCheckbox extends Component<RasfCheckboxProps> {
         <Button size="small" onClick={this.handleSelectAll}>
           {this.allText}
         </Button>
-        <ReactAntCheckboxGroup
-          value={_value}
-          items={items}
-          onChange={this.handleChange}
-          template={template}
-        />
+        <ReactAntCheckboxGroup value={_value} items={items} onChange={this.handleChange} template={template} />
       </div>
     );
   }

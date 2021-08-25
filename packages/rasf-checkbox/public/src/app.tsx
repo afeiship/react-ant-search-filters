@@ -62,11 +62,11 @@ export default (props: any) => {
   return (
     <Container>
       <h1>Toggleable: false</h1>
-      <RasfCheckbox idKey="value" items={items} />
+      <RasfCheckbox items={items} />
       <h1>Toggleable: false; with tempalte</h1>
-      <RasfCheckbox idKey="value" items={items} template={template} onChange={(e) => setValue(e.target.value)} />
+      <RasfCheckbox items={items} template={template} onChange={(e) => setValue(e.target.value)} />
       <h1>Toggleable: true</h1>
-      <RasfCheckbox toggleable idKey="value" items={items} />
+      <RasfCheckbox toggleable items={items} />
     </Container>
   );
 };
