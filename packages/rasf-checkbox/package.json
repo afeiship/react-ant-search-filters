@@ -1,6 +1,6 @@
 {
   "name": "@jswork/rasf-checkbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Search filters for checkbox.",
   "license": "MIT",
   "main": "dist/index.js",
