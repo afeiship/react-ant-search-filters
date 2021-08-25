@@ -91,7 +91,7 @@ export default class RasfCheckbox extends Component<RasfCheckboxProps> {
   };
 
   render() {
-    const { className, items, template, value, onChange, ...props } = this.props;
+    const { className, items, template, value, onChange, children, ...props } = this.props;
     const _value = this.state.value;
     const theProps = filterProps(props);
 
@@ -101,6 +101,7 @@ export default class RasfCheckbox extends Component<RasfCheckboxProps> {
           {this.allText}
         </Button>
         <ReactAntCheckboxGroup value={_value} items={items} onChange={this.handleChange} template={template} />
+        {children}
       </div>
     );
   }
