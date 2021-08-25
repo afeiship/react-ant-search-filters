@@ -1,5 +1,5 @@
 {
-  "name": "@jswork/ant-form-builder-widgets",
+  "name": "@jswork/react-ant-search-filters",
   "private": true,
   "workspaces": {
     "packages": [
@@ -10,8 +10,11 @@
     "lerna": "^3.22.1"
   },
   "scripts": {
-    "start": "cd ./packages/sites && yarn start",
-    "build": "lerna run build --since master",
-    "publish": "npm run build && lerna publish"
+    "start": "cd ./packages/websites && yarn start",
+    "lerna:clean": "lerna clean",
+    "lerna:list": "lerna list",
+    "lerna:bootstrap": "lerna bootstrap",
+    "build": "lerna run build --since master --no-private",
+    "publish": "npm run build && lerna publish --no-private"
   }
 }

@@ -1,2 +1,2 @@
-# ant-form-builder-widgets
-> Widgets list for ant-form-builder..
+# react-ant-search-filters
+> Search filters based on antd.

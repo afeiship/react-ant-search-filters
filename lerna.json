@@ -10,7 +10,7 @@
     "**/__tests__/**"
   ],
   "ignore": [
-    "packages/sites"
+    "packages/websites"
   ],
   "command": {
     "publish": {
