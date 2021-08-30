@@ -1252,10 +1252,10 @@
   dependencies:
     filter-react-props "0.0.4"
 
-"@jswork/next-abstract-checkbox@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@jswork/next-abstract-checkbox/-/next-abstract-checkbox-1.0.3.tgz#e4b73961cb030dfd3b859090cd476d069c26eec2"
-  integrity sha512-MfQiMa7Mhitu+W/zmi/Zb6uEvKfAeETZU6fxiqxncQDAKxWTjaFYR72qTmA8Pg4hHENYsQgFCMdnZvGybZX4Cg==
+"@jswork/next-abstract-checkbox@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@jswork/next-abstract-checkbox/-/next-abstract-checkbox-1.0.4.tgz#c3a96f7be24f8197e3edc308c303612e8534e3d9"
+  integrity sha512-zu/5J0FW6UITUQ2yXxT79Y++KpJXGOj57bIRaUlYkwJxkAY1ixwhn7GP2APV1ZSLWA1IG5u4Zo/S3ddOr2Xnlg==
   dependencies:
     "@jswork/next-remove" "^1.0.0"
     deep-equal "^2.0.5"

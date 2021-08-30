@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Checkbox, Tag } from 'antd';
 import RasfCheckbox from '../../src/main';
 import styled from 'styled-components';
@@ -59,16 +59,23 @@ export default (props: any) => {
     );
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setValue(['c1', 'c6']);
+    }, 1000);
+  }, []);
+
   const handleChange = (e) => {
     console.log('change:', e.target.value);
+    setValue(e.target.value);
   };
 
   return (
     <Container>
       <h1>Toggleable: false</h1>
-      <RasfCheckbox items={items} onChange={handleChange} />
+      <RasfCheckbox value={value} items={items} onChange={handleChange} />
       <h1>Toggleable: false; with tempalte</h1>
-      <RasfCheckbox items={items} template={template} onChange={(e) => setValue(e.target.value)} />
+      <RasfCheckbox items={items} template={template} onChange={handleChange} />
       <h1>Toggleable: true</h1>
       <RasfCheckbox toggleable items={items} />
     </Container>

@@ -4,7 +4,6 @@ import React, { Component, ReactNode } from 'react';
 import filterProps from '@jswork/filter-react-props';
 import NxAbstractCheckbox from '@jswork/next-abstract-checkbox';
 import ReactAntCheckboxGroup from '@jswork/react-ant-checkbox-group';
-import debounce from 'debounce';
 import { Button } from 'antd';
 
 const CLASS_NAME = 'rasf-checkbox';
@@ -73,16 +72,24 @@ export default class RasfCheckbox extends Component<RasfCheckboxProps> {
     });
   }
 
-  handleCtrlChange = debounce((inEvent) => {
+  shouldComponentUpdate(nextProps) {
+    const { value } = this.state;
+    const { value: nextValue } = nextProps;
+    if (value !== nextValue) {
+      this.setState({ value: nextValue });
+    }
+    return true;
+  }
+
+  handleCtrlChange = (inEvent) => {
     const { value } = inEvent.target;
     const { onChange } = this.props;
     this.setState({ value });
     onChange!(inEvent);
-  }, 100);
+  };
 
   handleChange = (inEvent) => {
-    this.ctrl.unSelectAll();
-    this.ctrl.selectMultiple(inEvent.target.value);
+    this.ctrl.set(inEvent.target.value);
   };
 
   handleSelectAll = () => {

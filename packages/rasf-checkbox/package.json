@@ -78,11 +78,10 @@
   },
   "dependencies": {
     "@jswork/filter-react-props": "^1.0.2",
-    "@jswork/next-abstract-checkbox": "^1.0.3",
+    "@jswork/next-abstract-checkbox": "^1.0.4",
     "@jswork/noop": "^1.0.0",
     "@jswork/react-ant-checkbox-group": "^1.0.3",
-    "classnames": "^2.2.6",
-    "debounce": "^1.2.1"
+    "classnames": "^2.2.6"
   },
   "publishConfig": {
     "access": "public",
