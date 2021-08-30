@@ -14,7 +14,7 @@ export interface RasfCheckboxProps {
    */
   className?: string;
   /**
-   * Runtime value.
+   * Runtime value for checkbox group.
    */
   value?: any[];
   /**
