@@ -59,10 +59,14 @@ export default (props: any) => {
     );
   };
 
+  const handleChange = (e) => {
+    console.log('change:', e.target.value);
+  };
+
   return (
     <Container>
       <h1>Toggleable: false</h1>
-      <RasfCheckbox items={items} />
+      <RasfCheckbox items={items} onChange={handleChange} />
       <h1>Toggleable: false; with tempalte</h1>
       <RasfCheckbox items={items} template={template} onChange={(e) => setValue(e.target.value)} />
       <h1>Toggleable: true</h1>
